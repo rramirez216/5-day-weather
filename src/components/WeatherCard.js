@@ -7,8 +7,8 @@ const WeatherCard = ({ weatherData: { main, name, weather } }) => {
       <Name>{name}</Name>
       <Current>{main.temp}&#176;</Current>
       <p>{weather[0].description}</p>
-      <MinMax>H: {main.temp_max}&#176;</MinMax>
-      <MinMax>L: {main.temp_min}&#176;</MinMax>
+      <Max>H: {main.temp_max}&#176;</Max>
+      <Min>L: {main.temp_min}&#176;</Min>
     </Card>
   )
 }
@@ -27,8 +27,11 @@ const Name = styled.div`
 const Current = styled.p`
   font-size: 3rem;
 `
-const MinMax = styled.p`
+const Min = styled.p`
   display: inline-block;
+`
+const Max = styled(Min)`
+  margin-right: 8px;
 `
 
 export default WeatherCard
