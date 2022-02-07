@@ -21,7 +21,7 @@ const App = () => {
   const handleSubmit = () => {
     const fetchData = async () => {
       const res = await axios(
-        `http://api.openweathermap.org/data/2.5/weather?zip=${zip}&units=imperial&appid=${process.env.REACT_APP_API_KEY}`
+        `https://api.openweathermap.org/data/2.5/weather?zip=${zip}&units=imperial&appid=${process.env.REACT_APP_API_KEY}`
       )
       setWeatherData(res.data)
       setBackground(res.data.weather[0].main)
@@ -107,6 +107,7 @@ const Button = styled.button`
   padding: 8px 16px;
   border-radius: 8px;
   border: none;
+  cursor: pointer;
 `
 
 export default App
