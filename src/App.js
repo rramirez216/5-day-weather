@@ -51,7 +51,7 @@ const App = () => {
   console.log(handleBackground())
 
   return (
-    <Wrapper main={handleBackground()}>
+    <Wrapper backgroundImage={handleBackground()}>
       <div>
         <Label htmlFor='search'>Zip Code:</Label>
         <TextInput
@@ -85,7 +85,7 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   gap: 64px;
-  background-image: url('${({ main }) => main}');
+  background-image: url('${({ backgroundImage }) => backgroundImage}');
   background-size: cover;
   background-repeat: no-repeat;
 `
